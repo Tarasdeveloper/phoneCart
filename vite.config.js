@@ -10,5 +10,5 @@ export default defineConfig({
             components: '/src/components',
         },
     },
-    base: '/Tarasdeveloper/phoneCart/',
+    base: '/phoneCart/',
 });
