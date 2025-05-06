@@ -1,16 +1,14 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import svgr from 'vite-plugin-svgr';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [react()],
-    // server: {
-    //     proxy: {
-    //         '/api': {
-    //             target: 'https://course-api.com',
-    //             changeOrigin: true,
-    //             rewrite: (path) => path.replace(/^\/api/, ''),
-    //         },
-    //     },
-    // },
+    plugins: [react(), svgr()],
+    resolve: {
+        alias: {
+            src: '/src',
+            components: '/src/components',
+        },
+    },
+    base: '/react_vite/',
 });
